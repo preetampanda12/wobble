@@ -250,42 +250,6 @@ button{font:inherit;color:inherit}
 .motto{padding:40px 24px 120px;text-align:center}
 .fill-text{margin:0;font-size:clamp(52px,14vw,240px);line-height:.86;color:transparent;-webkit-text-stroke:2px var(--yellow);background-image:linear-gradient(90deg,var(--yellow) 0 50%,transparent 50% 100%);background-size:200% 100%;background-position:0 0;-webkit-background-clip:text;background-clip:text}
 
-/* ---------- reviews ---------- */
-.reviews{background:#FFE9C7;color:var(--ink);padding:110px 24px}
-.rv-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:36px}
-.rv-head h2{margin:0;font-size:clamp(44px,7vw,112px);line-height:.9}
-.rv-sum{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.rv-sum[hidden]{display:none}
-.rv-avg{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:800;font-size:56px;line-height:1}
-.rv-sum small{display:block;font-size:14px;font-weight:600;color:var(--brown)}
-.stars{display:inline-flex;gap:2px;color:#E07B2A;font-size:22px;letter-spacing:1px;line-height:1}
-.stars .off{color:rgba(22,14,10,.18)}
-.rv-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
-.rv-card{background:#fff;border:2px solid var(--ink);border-radius:24px;padding:22px;display:flex;flex-direction:column;gap:12px;box-shadow:0 6px 0 var(--ink)}
-.rv-card blockquote{margin:0;font-size:17px;line-height:1.5}
-.rv-who{display:flex;align-items:center;gap:10px;margin-top:auto}
-.rv-av{width:40px;height:40px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;font-weight:800}
-.rv-who b{display:block;font-size:15px}
-.rv-who span{font-size:13px;color:var(--brown)}
-.rv-empty{grid-column:1 / -1;background:#fff;border:2px dashed var(--ink);border-radius:24px;padding:36px 24px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px}
-.rv-empty .big-stars{font-size:40px;color:#E07B2A;letter-spacing:4px;animation:twinkle 2.4s ease-in-out infinite}
-.rv-empty h3{margin:0;font-size:28px;line-height:1}
-.rv-empty p{margin:0;max-width:420px;font-size:16px;line-height:1.5;color:#3B2A1C}
-.rv-cta{display:flex;justify-content:center;margin-top:28px}
-/* star picker */
-.star-pick{display:flex;gap:6px;border:0;margin:0;padding:0}
-.star-pick label{position:relative;cursor:pointer}
-.star-pick input{position:absolute;opacity:0;width:1px;height:1px}
-.star-pick span{display:flex;align-items:center;justify-content:center;width:52px;height:52px;border:2px solid var(--ink);border-radius:14px;background:#fff;font-size:28px;color:rgba(22,14,10,.2);transition:transform .15s ease,background-color .15s ease,color .15s ease}
-.star-pick span.lit{background:var(--yellow);color:#E07B2A}
-.star-pick input:checked+span{animation:pop .45s cubic-bezier(.2,1.5,.4,1)}
-.star-pick input:focus-visible+span{outline:3px solid var(--caramel);outline-offset:2px}
-.star-word{margin:0;font-weight:700;font-size:15px;min-height:20px}
-.field select{font:inherit;font-weight:500;font-size:16px;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:14px;padding:12px 14px;min-height:52px;width:100%}
-.count{align-self:flex-end;font-size:13px;color:var(--brown);margin-top:-6px}
-#reviewSheet{width:min(560px,calc(100vw - 32px))}
-@keyframes twinkle{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.08);opacity:.75}}
-
 /* ---------- order ---------- */
 .order{background:var(--yellow);color:var(--ink);padding:110px 24px}
 .order-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:28px}
@@ -530,16 +494,6 @@ html.lock{overflow:hidden}
   .motto{padding:24px 20px 88px}
   .fill-text{font-size:13.8vw;-webkit-text-stroke-width:1.5px}
 
-  .reviews{padding:64px 20px}
-  .rv-head{margin-bottom:24px}
-  .rv-head h2{font-size:11.3vw}
-  .rv-avg{font-size:44px}
-  .rv-list{grid-template-columns:minmax(0,1fr)}
-  .rv-card{padding:18px;border-radius:20px}
-  .rv-card blockquote{font-size:16px}
-  .rv-cta .btn{width:100%}
-  .star-pick span{width:48px;height:48px;font-size:26px}
-  #reviewSheet{width:100%}
   .order{padding:64px 20px 48px}
   .order h2{font-size:11.3vw}
   .order-head{flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:24px}
@@ -639,7 +593,6 @@ html.lock{overflow:hidden}
     <nav class="nav-links" aria-label="Main">
       <a class="link" href="#flavours">Flavours</a>
       <a class="link" href="#how">How it's made</a>
-      <a class="link" href="#reviews">Reviews</a>
       <a class="btn btn-y nav-order" href="#order"><span class="lbl-full">Order now</span><span class="lbl-short">Order</span></a>
       <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
         <svg class="i-open" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7H20M4 12H20M4 17H20"/></svg>
@@ -650,7 +603,6 @@ html.lock{overflow:hidden}
   <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile" hidden>
     <a class="display" href="#flavours">Flavours</a>
     <a class="display" href="#how">How it's made</a>
-    <a class="display" href="#reviews">Reviews</a>
     <a class="display" href="#order">Order</a>
   </nav>
 </header>
@@ -893,20 +845,6 @@ html.lock{overflow:hidden}
   <p class="fill-text display">Made slow.<br>Eaten fast.</p>
 </section>
 
-<section class="reviews" id="reviews" aria-labelledby="rvTitle">
-  <div class="wrap">
-    <div class="rv-head reveal">
-      <h2 class="display" id="rvTitle">What people<br>are saying.</h2>
-      <div class="rv-sum" id="rvSum" hidden>
-        <span class="rv-avg" id="rvAvg">0</span>
-        <div><span class="stars" id="rvAvgStars" aria-hidden="true"></span><small id="rvCount"></small></div>
-      </div>
-    </div>
-    <div class="rv-list" id="rvList"></div>
-    <div class="rv-cta"><button class="btn btn-ink" id="rvOpen" type="button">Write a review ★</button></div>
-  </div>
-</section>
-
 <section class="order" id="order">
   <div class="wrap">
     <div class="order-head reveal">
@@ -944,7 +882,6 @@ html.lock{overflow:hidden}
       <nav aria-label="Footer">
         <a href="#flavours">Flavours</a>
         <a href="#how">How it's made</a>
-        <a href="#reviews">Reviews</a>
         <a href="#order">Order</a>
         <a href="https://wa.me/917978132765" target="_blank" rel="noopener">WhatsApp us</a>
       </nav>
@@ -975,10 +912,6 @@ html.lock{overflow:hidden}
         <h3>Your order</h3>
         <ul class="cart-list" id="coList"></ul>
         <p class="co-empty" id="coEmpty" hidden>Your order is empty.</p>
-        <div class="bill" id="coBill">
-          <div><span>Items</span><span id="coSub">₹0</span></div>
-          <div id="coFeeRow"><span>Home delivery</span><span id="coFee">₹10</span></div>
-        </div>
         <button type="button" class="link-btn" id="coAddMore" style="align-self:flex-start">+ Add more flavours</button>
       </section>
 
@@ -995,34 +928,8 @@ html.lock{overflow:hidden}
       </section>
 
       <section class="co-block">
-        <h3>Delivery or pickup?</h3>
-        <fieldset class="seg">
-          <legend class="sr-only">Delivery or pickup</legend>
-          <label><input type="radio" name="mode" value="delivery" checked><span>Home delivery<small>+ ₹10</small></span></label>
-          <label><input type="radio" name="mode" value="pickup"><span>I'll pick it up<small>Free</small></span></label>
-        </fieldset>
-        <div id="addrBox" style="display:flex;flex-direction:column;gap:12px">
-          <label class="field" for="coAddr">Address in Gunupur
-            <textarea id="coAddr" name="addr" rows="2" autocomplete="street-address" aria-describedby="coAddrErr" maxlength="200" placeholder="House no., street, hostel no."></textarea>
-          </label>
-          <p class="err" id="coAddrErr"></p>
-        </div>
-        <p class="hint-sm" id="pickupHint" hidden>We'll share the pickup spot with you on WhatsApp.</p>
-      </section>
-
-      <section class="co-block">
-        <h3>Payment</h3>
-        <fieldset class="seg">
-          <legend class="sr-only">Payment</legend>
-          <label><input type="radio" name="pay" value="cash" checked><span>Cash</span></label>
-          <label><input type="radio" name="pay" value="upi"><span>UPI</span></label>
-        </fieldset>
-        <p class="hint-sm">Pay when you get your custard.</p>
-      </section>
-
-      <section class="co-block">
         <label class="field" for="coNote">Note for us <em>(optional)</em>
-          <textarea id="coNote" name="note" rows="2" maxlength="300" placeholder="Less sweet, call before coming, family tub flavour…"></textarea>
+          <textarea id="coNote" name="note" rows="2" maxlength="300" placeholder="Less sweet, call before coming…"></textarea>
         </label>
         <label class="check"><input type="checkbox" id="coRemember" checked> Remember my details on this phone</label>
       </section>
@@ -1042,58 +949,6 @@ html.lock{overflow:hidden}
       <a class="btn btn-wa" id="coAgain" href="#" target="_blank" rel="noopener">Didn't open? Open WhatsApp</a>
       <button type="button" class="btn btn-ink" id="coDoneBtn">Done</button>
       <button type="button" class="link-btn" id="coEdit">Oops, edit my order</button>
-    </div>
-  </div>
-</dialog>
-
-<dialog class="sheet" id="reviewSheet" aria-label="Write a review">
-  <form id="rvForm" novalidate>
-    <header class="sheet-head">
-      <h2 class="display">Your review</h2>
-      <button type="button" class="icon-btn" id="rvClose" aria-label="Close review"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6L18 18M18 6L6 18"/></svg></button>
-    </header>
-    <div class="sheet-body">
-      <section class="co-block">
-        <h3>How was it?</h3>
-        <fieldset class="star-pick" id="rvStars" aria-describedby="rvStarsErr">
-          <legend class="sr-only">Rating out of 5</legend>
-          <label><input type="radio" name="stars" value="1"><span aria-hidden="true">★</span><b class="sr-only">1 star</b></label>
-          <label><input type="radio" name="stars" value="2"><span aria-hidden="true">★</span><b class="sr-only">2 stars</b></label>
-          <label><input type="radio" name="stars" value="3"><span aria-hidden="true">★</span><b class="sr-only">3 stars</b></label>
-          <label><input type="radio" name="stars" value="4"><span aria-hidden="true">★</span><b class="sr-only">4 stars</b></label>
-          <label><input type="radio" name="stars" value="5"><span aria-hidden="true">★</span><b class="sr-only">5 stars</b></label>
-        </fieldset>
-        <p class="star-word" id="rvWord" aria-live="polite"></p>
-        <p class="err" id="rvStarsErr"></p>
-      </section>
-      <section class="co-block">
-        <label class="field" for="rvName">Your name
-          <input id="rvName" name="name" autocomplete="name" maxlength="40" aria-describedby="rvNameErr">
-        </label>
-        <p class="err" id="rvNameErr"></p>
-        <label class="field" for="rvFlavour">What did you try?
-          <select id="rvFlavour" name="flavour"></select>
-        </label>
-        <label class="field" for="rvText">Your review
-          <textarea id="rvText" name="text" rows="4" maxlength="300" aria-describedby="rvTextErr rvLeft" placeholder="How did it taste? Would you order again?"></textarea>
-        </label>
-        <span class="count" id="rvLeft">0 / 300</span>
-        <p class="err" id="rvTextErr"></p>
-        <p class="hint-sm">Your review is sent to us on WhatsApp. We check every review and add it to the site.</p>
-      </section>
-    </div>
-    <footer class="sheet-foot">
-      <div class="tot"><span>Thank you for</span><strong>the feedback</strong></div>
-      <button type="submit" class="btn btn-wa">Send review <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4z"/></svg></button>
-    </footer>
-  </form>
-  <div class="done" id="rvDone" hidden>
-    <div class="tick" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
-    <h2 class="display" id="rvDoneTitle" tabindex="-1">Thank you!</h2>
-    <p>WhatsApp is opening with your review. <b>Just tap Send there.</b> We'll add it to the site after a quick check.</p>
-    <div class="acts">
-      <a class="btn btn-wa" id="rvAgain" href="#" target="_blank" rel="noopener">Didn't open? Open WhatsApp</a>
-      <button type="button" class="btn btn-ink" id="rvDoneBtn">Done</button>
     </div>
   </div>
 </dialog>
@@ -1552,7 +1407,7 @@ html.lock{overflow:hidden}
   }
 
   /* ---------- ordering: menu, cart, checkout, WhatsApp ---------- */
-  var PRICE = 39, MAX_QTY = 50, DELIVERY_FEE = 10;
+  var PRICE = 39, MAX_QTY = 50;
   var CART_KEY = 'wobbl-cart-v1', DETAILS_KEY = 'wobbl-details-v1';
 
   // turn the big embedded photos into short blob: URLs once, so they can be reused cheaply
@@ -1663,7 +1518,6 @@ html.lock{overflow:hidden}
     var totalText = T.total ? rupees(T.total) : (T.ask ? 'Ask us' : '₹0');
     var note = [];
     if (T.ask) note.push(T.total ? '+ family tub price, we\'ll tell you on WhatsApp' : 'We\'ll tell you the tub price on WhatsApp');
-    if (T.count) note.push('+ ₹' + DELIVERY_FEE + ' for home delivery (pickup is free)');
     $('#cartTotal').textContent = totalText;
     $('#cartNote').textContent = note.join(' · ');
     updateBill(T);
@@ -1767,42 +1621,24 @@ html.lock{overflow:hidden}
 
   /* checkout sheet */
   var dlg = $('#checkout'), form = $('#coForm'), doneEl = $('#coDone');
-  var coName = $('#coName'), coPhone = $('#coPhone'), coAddr = $('#coAddr');
+  var coName = $('#coName'), coPhone = $('#coPhone');
   var coNote = $('#coNote'), coRemember = $('#coRemember');
   var lastCart = null;
 
   function radio(name) { var r = form.querySelector('input[name="' + name + '"]:checked'); return r ? r.value : ''; }
-  function setRadio(name, v) { var r = form.querySelector('input[name="' + name + '"][value="' + v + '"]'); if (r) r.checked = true; }
   function pad(x) { return (x < 10 ? '0' : '') + x; }
 
-  // checkout bill: items + ₹10 when "Home delivery" is picked
-  function deliveryFee(T) { return T.count && radio('mode') === 'delivery' ? DELIVERY_FEE : 0; }
   function updateBill(T) {
     T = T || totals();
-    var fee = deliveryFee(T), grand = T.total + fee;
-    $('#coSub').textContent = T.total ? rupees(T.total) : (T.ask ? 'Ask us' : '₹0');
-    $('#coFeeRow').hidden = !fee;
-    $('#coFee').textContent = rupees(DELIVERY_FEE);
-    $('#coBill').hidden = !T.count;
-    $('#coTotal').textContent = grand ? rupees(grand) : (T.ask ? 'Ask us' : '₹0');
-    $('#coTotalNote').textContent = T.ask && grand ? '+ family tub price' : (fee ? 'incl. ₹' + fee + ' delivery' : '');
+    $('#coTotal').textContent = T.total ? rupees(T.total) : (T.ask ? 'Ask us' : '₹0');
+    $('#coTotalNote').textContent = T.ask && T.total ? '+ family tub price' : '';
   }
-
-  function syncMode() {
-    $('#addrBox').hidden = radio('mode') !== 'delivery';
-    updateBill();
-    $('#pickupHint').hidden = radio('mode') !== 'pickup';
-  }
-  form.addEventListener('change', syncMode);
 
   function fillDetails() {
     var d = load(DETAILS_KEY);
     if (!d) return;
     if (d.name && !coName.value) coName.value = d.name;
     if (d.phone && !coPhone.value) coPhone.value = d.phone;
-    if (d.addr && !coAddr.value) coAddr.value = d.addr;
-    if (d.mode) setRadio('mode', d.mode);
-    if (d.pay) setRadio('pay', d.pay);
   }
 
   function pickTarget() { return phone.matches ? '#flavours' : '#order'; }
@@ -1812,7 +1648,7 @@ html.lock{overflow:hidden}
     form.hidden = false;
     doneEl.hidden = true;
     fillDetails();
-    syncMode();
+    updateBill();
     document.documentElement.classList.add('lock');
     if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open', '');
   }
@@ -1858,11 +1694,6 @@ html.lock{overflow:hidden}
     setErr(coPhone, ok ? '' : 'Enter a 10-digit mobile number.');
     if (!ok) bad.push(coPhone);
 
-    if (radio('mode') === 'delivery') {
-      var a = coAddr.value.trim().length >= 3;
-      setErr(coAddr, a ? '' : 'Please add your address or hostel no. so we can deliver.');
-      if (!a) bad.push(coAddr);
-    } else setErr(coAddr, '');
 
     if (bad.length) bad[0].focus();
     return !bad.length;
@@ -1887,7 +1718,6 @@ html.lock{overflow:hidden}
     return n.split(' ').map(function (w) { return w ? w.charAt(0).toUpperCase() + w.slice(1) : w; }).join(' ');
   }
   function buildMessage(id, T, d) {
-    var fee = d.mode === 'delivery' ? DELIVERY_FEE : 0;
     var line = '━━━━━━━━━━━━━━';
     var m = [];
     m.push('Hi Wobbl, this is *' + d.name + '*. Thank you!');
@@ -1899,20 +1729,10 @@ html.lock{overflow:hidden}
       m.push(l.q + ' × ' + l.it.name + '  —  ' + (l.sum != null ? rupees(l.sum) : 'please tell me the price'));
     });
     m.push(line);
-    m.push('Items: ' + (T.total ? rupees(T.total) : '—') + (T.ask ? ' + family tub' : ''));
-    m.push(fee ? 'Home delivery: ' + rupees(fee) : 'Pickup: free');
-    m.push('*Total to pay: ' + rupees(T.total + fee) + '*' + (T.ask ? ' + family tub price' : ''));
+    m.push('*Total to pay: ' + (T.total ? rupees(T.total) : '—') + '*' + (T.ask ? ' + family tub price' : ''));
     m.push('');
     m.push('*Name:* ' + d.name);
     m.push('*Phone:* +91 ' + d.phone.slice(0, 5) + ' ' + d.phone.slice(5));
-    if (fee) {
-      var addr = d.addr;
-      if (!/gunupur/i.test(addr)) addr += ', Gunupur';
-      m.push('*Deliver to:* ' + addr);
-    } else {
-      m.push('*Pickup:* I will come and collect it');
-    }
-    m.push('*Payment:* ' + (d.pay === 'upi' ? 'UPI' : 'Cash') + (fee ? ' (on delivery)' : ' (at pickup)'));
     if (d.note) m.push('*Note:* ' + d.note);
     m.push('');
     m.push('Please confirm my order.');
@@ -1927,12 +1747,9 @@ html.lock{overflow:hidden}
     var d = {
       name: niceName(coName.value.trim().replace(/\s+/g, ' ')),
       phone: cleanPhone(coPhone.value),
-      mode: radio('mode'),
-      addr: coAddr.value.trim().replace(/\s+/g, ' '),
-      pay: radio('pay'),
       note: coNote.value.trim().replace(/\s+/g, ' ')
     };
-    if (coRemember.checked) store(DETAILS_KEY, { name: d.name, phone: d.phone, mode: d.mode, addr: d.addr, pay: d.pay });
+    if (coRemember.checked) store(DETAILS_KEY, { name: d.name, phone: d.phone });
     else store(DETAILS_KEY, null);
 
     var id = orderId();
@@ -1956,130 +1773,6 @@ html.lock{overflow:hidden}
 
   refresh();
 
-  /* ---------- reviews ----------
-     Approved reviews live in this list. When a customer sends a review on WhatsApp,
-     copy it here to show it on the site, for example:
-       { name: 'Preet', stars: 5, flavour: 'Classic Vanilla', text: 'So creamy, loved the fruit!', date: '2026-11-14' },
-  */
-  var REVIEWS = [
-  ];
-
-  var STAR_WORDS = ['', 'Not good', 'Could be better', 'Good', 'Really good', 'Loved it!'];
-  function starsHtml(n) {
-    var h = '';
-    for (var i = 1; i <= 5; i++) h += '<span' + (i <= n ? '' : ' class="off"') + '>★</span>';
-    return h;
-  }
-  function renderReviews() {
-    var list = REVIEWS.filter(function (r) { return r && r.text && r.stars >= 1 && r.stars <= 5; });
-    var box = $('#rvList');
-    if (!list.length) {
-      $('#rvSum').hidden = true;
-      box.innerHTML = '<div class="rv-empty"><span class="big-stars" aria-hidden="true">★★★★★</span>' +
-        '<h3 class="display">No reviews yet</h3>' +
-        '<p>Tried our custard? Tell us how it was. Your review could be the first one here.</p></div>';
-      return;
-    }
-    var sum = list.reduce(function (a, r) { return a + r.stars; }, 0), avg = sum / list.length;
-    $('#rvSum').hidden = false;
-    $('#rvAvg').textContent = avg.toFixed(1);
-    $('#rvAvgStars').innerHTML = starsHtml(Math.round(avg));
-    $('#rvCount').textContent = list.length + (list.length === 1 ? ' review' : ' reviews');
-    box.innerHTML = list.map(function (r) {
-      var nm = esc(r.name || 'Customer');
-      var when = '';
-      if (r.date) { try { when = new Date(r.date + 'T12:00').toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }); } catch (e) {} }
-      return '<article class="rv-card">' +
-        '<span class="stars" role="img" aria-label="' + r.stars + ' out of 5 stars">' + starsHtml(r.stars) + '</span>' +
-        '<blockquote>' + esc(r.text) + '</blockquote>' +
-        '<div class="rv-who"><span class="rv-av" aria-hidden="true">' + nm.charAt(0).toUpperCase() + '</span>' +
-        '<div><b>' + nm + '</b><span>' + esc([r.flavour, when].filter(Boolean).join(' · ')) + '</span></div></div></article>';
-    }).join('');
-  }
-  renderReviews();
-
-  var rvSheet = $('#reviewSheet'), rvForm = $('#rvForm'), rvDone = $('#rvDone');
-  var rvName = $('#rvName'), rvText = $('#rvText'), rvFlavour = $('#rvFlavour');
-  rvFlavour.innerHTML = FLAVOURS.filter(function (f) { return !f.soon; }).map(function (f) {
-    return '<option>' + esc(f.name) + '</option>';
-  }).join('') + '<option>Family tub</option>';
-
-  function rvStars() { var r = rvForm.querySelector('input[name="stars"]:checked'); return r ? +r.value : 0; }
-  function paintStars(n) {
-    $$('.star-pick span', rvForm).forEach(function (sp, i) { sp.classList.toggle('lit', i < n); });
-    $('#rvWord').textContent = STAR_WORDS[n] || '';
-  }
-  $$('.star-pick label', rvForm).forEach(function (lb, i) {
-    lb.addEventListener('mouseenter', function () { paintStars(i + 1); });
-  });
-  $('#rvStars').addEventListener('mouseleave', function () { paintStars(rvStars()); });
-  rvForm.addEventListener('change', function (e) {
-    if (e.target.name === 'stars') { paintStars(rvStars()); $('#rvStarsErr').textContent = ''; }
-  });
-  rvText.addEventListener('input', function () {
-    $('#rvLeft').textContent = rvText.value.length + ' / 300';
-    if (rvText.getAttribute('aria-invalid') === 'true') { rvText.setAttribute('aria-invalid', 'false'); $('#rvTextErr').textContent = ''; }
-  });
-  rvName.addEventListener('input', function () {
-    if (rvName.getAttribute('aria-invalid') === 'true') { rvName.setAttribute('aria-invalid', 'false'); $('#rvNameErr').textContent = ''; }
-  });
-
-  function openReview() {
-    hideToast();
-    rvForm.hidden = false;
-    rvDone.hidden = true;
-    var saved = load(DETAILS_KEY);
-    if (saved && saved.name && !rvName.value) rvName.value = saved.name;
-    document.documentElement.classList.add('lock');
-    if (typeof rvSheet.showModal === 'function') rvSheet.showModal(); else rvSheet.setAttribute('open', '');
-  }
-  function closeReview() {
-    if (typeof rvSheet.close === 'function' && rvSheet.open) rvSheet.close();
-    else { rvSheet.removeAttribute('open'); document.documentElement.classList.remove('lock'); }
-  }
-  rvSheet.addEventListener('close', function () { document.documentElement.classList.remove('lock'); });
-  rvSheet.addEventListener('click', function (e) { if (e.target === rvSheet) closeReview(); });
-  $('#rvOpen').addEventListener('click', openReview);
-  $('#rvClose').addEventListener('click', closeReview);
-  $('#rvDoneBtn').addEventListener('click', closeReview);
-
-  rvForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var stars = rvStars(), nm = niceName(rvName.value.trim().replace(/\s+/g, ' ')), txt = rvText.value.trim().replace(/\s+/g, ' ');
-    var first = null;
-    $('#rvStarsErr').textContent = stars ? '' : 'Tap the stars to rate us.';
-    if (!stars) first = first || rvForm.querySelector('input[name="stars"]');
-    rvName.setAttribute('aria-invalid', nm.length < 2 ? 'true' : 'false');
-    $('#rvNameErr').textContent = nm.length < 2 ? 'Please enter your name.' : '';
-    if (nm.length < 2) first = first || rvName;
-    rvText.setAttribute('aria-invalid', txt.length < 5 ? 'true' : 'false');
-    $('#rvTextErr').textContent = txt.length < 5 ? 'Write a few words about it.' : '';
-    if (txt.length < 5) first = first || rvText;
-    if (first) { first.focus(); return; }
-
-    var full = '', i;
-    for (i = 1; i <= 5; i++) full += i <= stars ? '★' : '☆';
-    var msg = [
-      '*New review for Wobbl*',
-      '',
-      'Rating: ' + full + ' (' + stars + '/5)',
-      'Flavour: ' + rvFlavour.value,
-      '',
-      '"' + txt + '"',
-      '',
-      '- ' + nm
-    ].join('\n');
-    var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
-    window.open(url, '_blank', 'noopener');
-    $('#rvAgain').href = url;
-    $('#rvDoneTitle').textContent = 'Thanks, ' + nm.split(' ')[0] + '!';
-    rvForm.hidden = true;
-    rvDone.hidden = false;
-    $('#rvDoneTitle').focus();
-    rvForm.reset();
-    paintStars(0);
-    $('#rvLeft').textContent = '0 / 300';
-  });
 })();
 </script>
 </body>
